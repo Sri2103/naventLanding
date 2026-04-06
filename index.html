@@ -1167,7 +1167,7 @@
                     <div class="roi-label">Annual Savings</div>
                 </div>
                 <div class="roi-metric">
-                    <div class="roi-value" id="roi">0%</div>
+                    <div class="roi-value" id="roi-year">0%</div>
                     <div class="roi-label">ROI Year 1</div>
                 </div>
                 <div class="roi-metric">
@@ -1331,7 +1331,7 @@
         const roi = naventCost > 0 ? ((savings - naventCost) / naventCost * 100).toFixed(0) : 0;
         const payback = savings > 0 ? Math.round((naventCost / savings) * 12) : 0;
         const savEl = document.getElementById('savings');
-        const roiEl = document.getElementById('roi');
+        const roiEl = document.getElementById('roi-year');
         const payEl = document.getElementById('payback');
         if (savEl) savEl.textContent = '$' + Math.round(savings).toLocaleString();
         if (roiEl) roiEl.textContent = roi + '%';
